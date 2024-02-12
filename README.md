@@ -6,6 +6,12 @@ This is a simple command-line phonebook application implemented in Python. It al
 
 Watch this demo video: https://youtu.be/VAStPD3kQnY?si=PMFv_KIfXr7ZJ_SA
 
+<video width="320" height="240" controls>
+  <source src="https://youtu.be/VAStPD3kQnY?si=PMFv_KIfXr7ZJ_SA" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Features
 
 - Show the list of contacts.
