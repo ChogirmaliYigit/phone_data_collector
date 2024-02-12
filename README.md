@@ -2,6 +2,10 @@
 
 This is a simple command-line phonebook application implemented in Python. It allows users to manage a list of contacts, including adding, editing, and searching for contacts.
 
+## Demo
+
+Watch this demo video: https://youtu.be/VAStPD3kQnY?si=PMFv_KIfXr7ZJ_SA
+
 ## Features
 
 - Show the list of contacts.
