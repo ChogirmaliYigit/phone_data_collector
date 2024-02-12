@@ -25,6 +25,9 @@ def show_list(session: PromptSession):
     if result:
         paginate_data(session, result)
 
+    else:
+        return "There is no data to display."
+
 
 def add_item():
     """
@@ -81,6 +84,7 @@ def edit_item():
 
         if isinstance(user_data, dict) and user_data:
             db.edit_user(user[0], **user_data)
+        shortcuts.clear()
 
 
 def search_items(session: PromptSession):
@@ -89,7 +93,7 @@ def search_items(session: PromptSession):
     :param session: Prompt session for pagination.
     """
     while True:
-        user_data = ask_user_data("Only enter the necessary information about user to search!")
+        user_data = ask_user_data("Only enter the necessary information about user to search! (Press q to quit)")
 
         if user_data == "q":
             break

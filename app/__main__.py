@@ -37,7 +37,12 @@ def main():
         print_window_title(list(TASKS.values())[task_id - 1])
 
         if task_id == 1:
-            show_list(session)
+            message = show_list(session)
+            if message:
+                print(message)
+                yes_no = input("Do you want to back? (yes/no): ")
+                if yes_no != "yes":
+                    break
         elif task_id == 2:
             add_item()
         elif task_id == 3:

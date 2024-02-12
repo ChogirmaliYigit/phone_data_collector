@@ -61,9 +61,9 @@ class Database:
         :return: Formatted SQL query and parameters.
         """
         sql += " AND ".join([
-            f"{item} LIKE ?" for item in parameters
+            f"{item} = ?" for item in parameters
         ])
-        return sql, tuple(f"%{value}%" for value in parameters.values())
+        return sql, tuple(parameters.values())
 
     def create_users_table(self):
         """
@@ -149,7 +149,7 @@ class Database:
 
         for field, value in criteria.items():
             conditions.append(f"{field} LIKE ?")
-            values.append(value)
+            values.append(f"%{value}%")
 
         sql += " AND ".join(conditions)
         return self.execute(sql, tuple(values), fetchall=True)
